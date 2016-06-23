@@ -87,11 +87,13 @@ def rpsls(player_choice):
             print "Wrong choice!"
         
 # test your code - THESE CALLS MUST BE PRESENT IN YOUR SUBMITTED CODE
-rpsls(raw_input("what is your choice?"))
-rpsls("Spock")
+rpsls(raw_input("what is your choice?(No space)  "))
+
+"""rpsls("Spock")
 rpsls("paper")
 rpsls("lizard")
 rpsls("scissors")
+"""
 
 # always remember to check your completed program against the grading rubric
 
