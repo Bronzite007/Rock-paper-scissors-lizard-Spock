@@ -48,8 +48,6 @@ def number_to_name(number):
     # convert number to a name using if/elif/else
     # don't forget to return the result!
     
-import random
-    
 def rpsls(player_choice): 
     # delete the following pass statement and fill in your code below
     
@@ -76,7 +74,16 @@ def rpsls(player_choice):
         print "Computer chooses %s" % comp_choice
         
         player_comp_diff = (player_choice_number - comp_number) % 5
-    # use if/elif/else to determine winner, print winner message
+        
+        return player_comp_diff;
+
+import random
+    
+def main():
+    player_comp_diff = 0
+    while (player_comp_diff == 0):
+        player_comp_diff = rpsls(raw_input("what is your choice?(No space)  "))
+        # use if/elif/else to determine winner, print winner message
         if player_comp_diff == 0:
             print "Tie!"
         elif player_comp_diff == 1 or player_comp_diff == 2:
@@ -85,9 +92,13 @@ def rpsls(player_choice):
             print "Player wins!"    
         else:
             print "Wrong choice!"
+    return;
+
+
+main();
         
 # test your code - THESE CALLS MUST BE PRESENT IN YOUR SUBMITTED CODE
-rpsls(raw_input("what is your choice?(No space)  "))
+#rpsls(raw_input("what is your choice?(No space)  "))
 
 """rpsls("Spock")
 rpsls("paper")
